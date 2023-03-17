@@ -5,8 +5,13 @@ Complete the function called countZeros() which will take a binary string (Binar
 function countZeros(binary_num) {
     //Write your code here
     //Don't forget to return
-    const binary_num_string = binary_num;
-    console.log(binary_num_string, typeof binary_num_string);
-    
+    let sum = 0;
+    for (let i = 0; i < binary_num.length; i++) {
+        // console.log(binary_num[i]);
+        if (binary_num[i] === "0") {
+            sum = sum + 1;
+        }
+    }
+    return sum;
 }
-countZeros("10")
+console.log(countZeros("00100"));
